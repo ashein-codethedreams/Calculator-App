@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="calculator">
-            <input type="text" placeholder="0">
+            <input type="text" placeholder="0" id="output-screen">
             <button onclick="Clear()">Cl</button>
             <button onclick="Delete()">DEL</button>
             <button onclick="display('%')">%</button>
@@ -35,6 +35,29 @@
 
         </div>
     </div>
+    <script>
+        let outputScreen = document.getElementById("output-screen");
+
+        function display(num) {
+            outputScreen.value += num;
+        }
+
+        function Calculate() {
+            try {
+                outputScreen.value = eval(outputScreen.value);
+            } catch (err) {
+                alert("Invalid");
+            }
+        }
+
+        function Clear() {
+            outputScreen.value = "";
+        }
+
+        function Delete() {
+            outputScreen.value = outputScreen.value.slice(0, -1);
+        }
+    </script>
 
 
 </body>
