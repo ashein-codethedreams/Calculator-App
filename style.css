@@ -45,6 +45,7 @@ input {
 button {
     height: 48px;
     width: 48px;
+    cursor: pointer;
     background: #ecf0f3;
     box-shadow: -5px -5px 12px #ffffff,
         5px 5px 12px rgba(0, 0, 0, .16);
